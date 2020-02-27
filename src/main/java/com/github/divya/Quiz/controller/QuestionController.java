@@ -1,7 +1,7 @@
 package com.github.divya.Quiz.controller;
 
-import com.github.divya.Quiz.model.Quiz;
-import com.github.divya.Quiz.service.QuizService;
+import com.github.divya.Quiz.model.Question;
+import com.github.divya.Quiz.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,49 +10,50 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/quiz")
-public class QuizController {
+@RequestMapping("/question")
+public class QuestionController {
     @Autowired
-    private QuizService quizService;
+    private QuestionService questionService;
 
-    public QuizController(QuizService service) {
-        this.quizService = service;
+    public QuestionController(QuestionService questionService) {
+        this.questionService = questionService;
     }
 
     @GetMapping(value = "/")
-    public ResponseEntity<List<Quiz>> getAllQuizzes(){
-        List<Quiz> responseBody = quizService.getAllQuizzes();
+    public ResponseEntity<List<Question>> getAllQuestions(){
+        System.out.println("QuestionController.getAllQuestions");
+        List<Question> responseBody = questionService.getAllQuestion();
         ResponseEntity responseEntity = new ResponseEntity<>(responseBody, HttpStatus.OK);
         return responseEntity;
     }
 
     @RequestMapping(value="/create", method= RequestMethod.POST)
-    public  ResponseEntity<Quiz> create(@RequestBody Quiz quiz){
-        Quiz responseBody = (Quiz) quizService.create(quiz);
+    public  ResponseEntity<Question> create(@RequestBody Question question){
+        Question responseBody = (Question) questionService.create(question);
         ResponseEntity responseEntity = new ResponseEntity<>(responseBody, HttpStatus.OK);
         return responseEntity;
     }
 
 
     @RequestMapping(value = "/read/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Quiz> get(@PathVariable Integer id) {
-        Quiz responseBody = quizService.get(id);
+    public ResponseEntity<Question> get(@PathVariable Integer id) {
+        Question responseBody = questionService.get(id);
         ResponseEntity responseEntity = new ResponseEntity<>(responseBody, HttpStatus.OK);
         return  responseEntity;
     }
 
 
     @RequestMapping(value="/update/{id}", method=RequestMethod.PUT)
-    public ResponseEntity<Quiz> update(@PathVariable Integer id, @RequestBody Quiz quiz){
-        Quiz responseBody = quizService.update(id,quiz);
+    public ResponseEntity<Question> update(@PathVariable Integer id, @RequestBody Question user){
+        Question responseBody = questionService.update(id,user);
         ResponseEntity responseEntity = new ResponseEntity<>(responseBody,HttpStatus.OK);
         return responseEntity;
     }
 
 
     @RequestMapping(value="/delete/{id}", method=RequestMethod.DELETE)
-    public ResponseEntity<Quiz> delete(@PathVariable Integer id){
-        Quiz responseBody = quizService.delete(id);
+    public ResponseEntity<Question> delete(@PathVariable Integer id){
+        Question responseBody = questionService.delete(id);
         ResponseEntity responseEntity = new ResponseEntity<>(responseBody, HttpStatus.OK);
         return responseEntity;
     }

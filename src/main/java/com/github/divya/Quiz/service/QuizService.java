@@ -6,34 +6,50 @@ import com.github.divya.Quiz.repository.QuizRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class QuizService {
     @Autowired
-    private QuizRepository repository;
+    private QuizRepository quizRepository;
 
     public QuizService(QuizRepository repository) {
-        this.repository = repository;
+        this.quizRepository = repository;
     }
 
-    public List<User> getAllQuizzes() {
-        return null;
+    public List<Quiz> getAllQuizzes() {
+        List<Quiz> quizList = new ArrayList<>();
+        quizRepository.findAll().forEach(x -> quizList.add(x));
+        return quizList;
     }
 
-    public Object create(Quiz quiz) {
-        return null;
+    public Quiz create(Quiz quiz) {
+        Quiz quizCreated = quizRepository.save(quiz);
+        return quizCreated;
     }
 
     public Quiz get(Integer id) {
-        return null;
+        Optional<Quiz> potentialUser = quizRepository.findById(id);
+        Quiz quiz = potentialUser.get();
+        return quiz;
     }
 
     public Quiz update(Integer id, Quiz quiz) {
-        return null;
+        Quiz quizInDataBase = get(id);
+        Integer newScore = quiz.getScore();
+        Integer newUserId = quiz.getUserId();
+
+        quizInDataBase.setScore(newScore);
+        quizInDataBase.setUserId(newUserId);
+        return quizInDataBase;
     }
 
     public Quiz delete(Integer id) {
-        return null;
+        Quiz quiz = get(id);
+        quizRepository.delete(quiz);
+        return quiz;
     }
-}
+    }
+

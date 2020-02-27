@@ -3,7 +3,6 @@ package com.github.divya.Quiz.service;
 import com.github.divya.Quiz.model.User;
 import com.github.divya.Quiz.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -13,27 +12,27 @@ import java.util.Optional;
 @Service
 public class UserService {
 
-    private UserRepository repository;
+    private UserRepository userRepository;
 
     @Autowired
     public UserService(UserRepository repository) {
-        this.repository = repository;
+        this.userRepository = repository;
     }
 
     public List<User> getAllUsers() {
         List<User> userList = new ArrayList<>();
-        repository.findAll().forEach(x -> userList.add(x));
+        userRepository.findAll().forEach(x -> userList.add(x));
         return userList;
     }
 
     public User create(User user) {
-        User userCreated = repository.save(user);
+        User userCreated = userRepository.save(user);
         return userCreated;
     }
 
 
     public User get(Integer id) {
-        Optional<User> potentialUser = repository.findById(id);
+        Optional<User> potentialUser = userRepository.findById(id);
         User user = potentialUser.get();
         return user;
     }
@@ -41,18 +40,28 @@ public class UserService {
 
     public User update(Integer id, User user) {
         User userInDataBase = get(id);
+        Integer newUserId = user.getUserId();
+        String newUserName = user.getUserName();
+        String newPassword = user.getPassword();
         String newFirstName = user.getFirstName();
         String newLastName = user.getLastName();
+        String newEmail = user.getEmail();
+        String newType = user.getType();
 
+        userInDataBase.setUserId(newUserId);
+        userInDataBase.setUserName(newUserName);
+        userInDataBase.setPassword(newPassword);
         userInDataBase.setFirstName(newFirstName);
         userInDataBase.setLastName(newLastName);
-        repository.save(userInDataBase);
+        userInDataBase.setEmail(newEmail);
+        userInDataBase.setType(newType);
+        userRepository.save(userInDataBase);
         return userInDataBase;
     }
 
     public User delete(Integer id) {
         User user = get(id);
-        repository.delete(user);
+        userRepository.delete(user);
         return user;
     }
 
