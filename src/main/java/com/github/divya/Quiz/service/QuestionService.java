@@ -40,9 +40,9 @@ public class QuestionService {
         Integer newQuestionId = question.getQuestionId();
         String newQuestion = question.getQuestion();
         String newAnswer1 = question.getAnswer1();
-        String newAnswer2 = question.getAnswer1();
-        String newAnswer3 = question.getAnswer1();
-        String newAnswer4 = question.getAnswer1();
+        String newAnswer2 = question.getAnswer2();
+        String newAnswer3 = question.getAnswer3();
+        String newAnswer4 = question.getAnswer4();
         Integer newQuestionLevel = question.getQuestionLevel();
         String newCorrectAnswer = question.getCorrectAnswer();
 

@@ -44,8 +44,8 @@ public class QuestionController {
 
 
     @RequestMapping(value="/update/{id}", method=RequestMethod.PUT)
-    public ResponseEntity<Question> update(@PathVariable Integer id, @RequestBody Question user){
-        Question responseBody = questionService.update(id,user);
+    public ResponseEntity<Question> update(@PathVariable Integer id, @RequestBody Question question){
+        Question responseBody = questionService.update(id,question);
         ResponseEntity responseEntity = new ResponseEntity<>(responseBody,HttpStatus.OK);
         return responseEntity;
     }

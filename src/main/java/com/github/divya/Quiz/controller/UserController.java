@@ -13,23 +13,23 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserController {
     @Autowired
-    private UserService service;
+    private UserService userService;
 
     public UserController(UserService service) {
-        this.service = service;
+        this.userService = service;
     }
 
     @GetMapping(value = "/")
     public ResponseEntity<List<User>> getAllUsers(){
         System.out.println("userController.getAllUsers");
-        List<User> responseBody = service.getAllUsers();
+        List<User> responseBody = userService.getAllUsers();
         ResponseEntity responseEntity = new ResponseEntity<>(responseBody, HttpStatus.OK);
         return responseEntity;
     }
 
     @RequestMapping(value="/create", method= RequestMethod.POST)
       public  ResponseEntity<User> create(@RequestBody User user){
-        User responseBody = (User) service.create(user);
+        User responseBody = (User) userService.create(user);
         ResponseEntity responseEntity = new ResponseEntity<>(responseBody, HttpStatus.OK);
             return responseEntity;
     }
@@ -37,7 +37,7 @@ public class UserController {
 
     @RequestMapping(value = "/read/{id}", method = RequestMethod.GET)
     public ResponseEntity<User> get(@PathVariable Integer id) {
-       User responseBody = service.get(id);
+       User responseBody = userService.get(id);
         ResponseEntity responseEntity = new ResponseEntity<>(responseBody, HttpStatus.OK);
         return  responseEntity;
     }
@@ -45,15 +45,15 @@ public class UserController {
 
     @RequestMapping(value="/update/{id}", method=RequestMethod.PUT)
     public ResponseEntity<User> update(@PathVariable Integer id, @RequestBody User user){
-        User responseBody = service.update(id,user);
+        User responseBody = userService.update(id,user);
         ResponseEntity responseEntity = new ResponseEntity<>(responseBody,HttpStatus.OK);
-    return responseEntity;
+         return responseEntity;
     }
 
 
     @RequestMapping(value="/delete/{id}", method=RequestMethod.DELETE)
     public ResponseEntity<User> delete(@PathVariable Integer id){
-       User responseBody = service.delete(id);
+       User responseBody = userService.delete(id);
         ResponseEntity responseEntity = new ResponseEntity<>(responseBody, HttpStatus.OK);
         return responseEntity;
     }
