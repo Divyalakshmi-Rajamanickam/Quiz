@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/user")
+@CrossOrigin(value = "http://localhost:4200")
 public class UserController {
     @Autowired
     private UserService userService;
@@ -27,10 +28,20 @@ public class UserController {
         return responseEntity;
     }
 
+    @RequestMapping(value = "/login", method=RequestMethod.GET)
+    public ResponseEntity<User> loginUser(@RequestBody User user){
+        User responseBody = userService.loginUser(user);
+        ResponseEntity responseEntity = new ResponseEntity<>(responseBody, HttpStatus.OK);
+        return responseEntity;
+    }
+
+
     @RequestMapping(value="/create", method= RequestMethod.POST)
       public  ResponseEntity<User> create(@RequestBody User user){
-        User responseBody = (User) userService.create(user);
+        System.out.println("userController.create " + user);
+        User responseBody = userService.create(user);
         ResponseEntity responseEntity = new ResponseEntity<>(responseBody, HttpStatus.OK);
+        System.out.println(responseBody);
             return responseEntity;
     }
 

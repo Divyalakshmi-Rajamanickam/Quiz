@@ -17,6 +17,7 @@ public class User {
     private String email;
     private String type;
 
+
     public User(Integer userId, String userName, String password, String firstName,
                 String lastName, String email, String type) {
         this.userId = userId;

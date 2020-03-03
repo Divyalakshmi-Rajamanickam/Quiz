@@ -26,6 +26,7 @@ public class UserService {
     }
 
     public User create(User user) {
+        System.out.println("userService.create: " + user);
         User userCreated = userRepository.save(user);
         return userCreated;
     }
@@ -65,6 +66,7 @@ public class UserService {
         return user;
     }
 
-
-
+    public User loginUser(User user) {
+        userRepository.
+    }
 }
