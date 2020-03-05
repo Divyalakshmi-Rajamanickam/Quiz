@@ -55,6 +55,21 @@ public class QuizApplication implements CommandLineRunner {
 		userRepository.save(user6);
 		userRepository.save(will);
 
+//		User userValidate1 = new User("userOne","password");
+//		User userValidate2 = new User("userOne","password");
+//		User userValidate3 = new User("userOne","password");
+//		User userValidate4 = new User("userOne","password");
+//		User userValidate5 = new User("userOne","password");
+//		User userValidate6 = new User("userOne","password");
+//		User userValidate7 = new User("userOne","password");
+//
+//		userRepository.save(userValidate1);
+//		userRepository.save(userValidate2);
+//		userRepository.save(userValidate3);
+//		userRepository.save(userValidate4);
+//		userRepository.save(userValidate5);
+//		userRepository.save(userValidate6);
+
 
 		Question question1 = new Question(1,"What is 9+3?","8","30","12","4",0,"12");
 		Question question2 = new Question(2,"What color is the apple?","Yellow","Red","Purple","Blue",0,"Red");
