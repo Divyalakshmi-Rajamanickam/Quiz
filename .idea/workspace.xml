@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="786b9785-eda2-440a-aef6-fcc0b7243791" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/tables/schema.user_validation.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/divya/Quiz/QuizApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/divya/Quiz/QuizApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/divya/Quiz/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/divya/Quiz/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/divya/Quiz/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/divya/Quiz/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/divya/Quiz/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/divya/Quiz/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/divya/Quiz/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/divya/Quiz/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/QuizApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/QuizApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/controller/QuestionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/controller/QuestionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/controller/QuizController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/controller/QuizController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/controller/QuizQuestionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/controller/QuizQuestionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/model/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/model/Question.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/model/Quiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/model/Quiz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/model/QuizQuestion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/model/QuizQuestion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/repository/QuestionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/repository/QuestionRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/repository/QuizQuestionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/repository/QuizQuestionRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/repository/QuizRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/repository/QuizRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/service/QuestionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/service/QuestionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/service/QuizQuestionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/service/QuizQuestionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/service/QuizService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/service/QuizService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/divya/Quiz/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/github/divya/Quiz/QuizApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/github/divya/Quiz/QuizApplicationTests.class" afterDir="false" />
-    </list>
+    <list default="true" id="786b9785-eda2-440a-aef6-fcc0b7243791" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
