@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/question")
+@CrossOrigin(value = "http://localhost:4200")
 public class QuestionController {
     @Autowired
     private QuestionService questionService;
