@@ -5,9 +5,7 @@ import com.github.divya.Quiz.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class UserService {
@@ -66,7 +64,15 @@ public class UserService {
         return user;
     }
 
-    public User loginUser(User user) {
-        userRepository.
+    public boolean loginUser(User user) {
+        System.out.println(user );
+       boolean currentUser =  userRepository.findAll().contains(user);
+        return currentUser;
     }
+
+//    public Map<String,String> userValidation(User user) {
+//        Map<String,String> userMap = new HashMap<>();
+//        userRepository.findAll().forEach(x->userMap.put(user.getUserName(),user.getPassword()));
+//        return userMap;
+//    }
 }

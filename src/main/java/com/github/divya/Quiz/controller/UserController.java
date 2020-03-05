@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/user")
@@ -28,9 +29,18 @@ public class UserController {
         return responseEntity;
     }
 
+
+//    @GetMapping(value = "/userValidate")
+//    public ResponseEntity<Map<String,String>> userValidation(@RequestBody User user){
+//        System.out.println("userController.userValidation");
+//        Map<String,String> responseBody = userService.userValidation(user);
+//        ResponseEntity responseEntity = new ResponseEntity<>(responseBody, HttpStatus.OK);
+//        return responseEntity;
+//    }
     @RequestMapping(value = "/login", method=RequestMethod.GET)
     public ResponseEntity<User> loginUser(@RequestBody User user){
-        User responseBody = userService.loginUser(user);
+        System.out.println("userService.login" + user );
+        boolean responseBody = userService.loginUser(user);
         ResponseEntity responseEntity = new ResponseEntity<>(responseBody, HttpStatus.OK);
         return responseEntity;
     }
