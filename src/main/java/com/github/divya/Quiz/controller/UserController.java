@@ -38,10 +38,10 @@ public class UserController {
 //        return responseEntity;
 //    }
     @RequestMapping(value = "/login", method=RequestMethod.GET)
-    public ResponseEntity<User> loginUser(@RequestBody User user){
+    public ResponseEntity<Boolean> loginUser(@RequestBody User user){
         System.out.println("userService.login" + user );
         boolean responseBody = userService.loginUser(user);
-        ResponseEntity responseEntity = new ResponseEntity<>(responseBody, HttpStatus.OK);
+        ResponseEntity<Boolean> responseEntity = new ResponseEntity<>(responseBody, HttpStatus.OK);
         return responseEntity;
     }
 

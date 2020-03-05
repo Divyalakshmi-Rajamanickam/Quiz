@@ -65,14 +65,22 @@ public class UserService {
     }
 
     public boolean loginUser(User user) {
-        System.out.println(user );
-       boolean currentUser =  userRepository.findAll().contains(user);
-        return currentUser;
+        System.out.println(user);
+//       boolean currentUser =  userRepository.findAll().forEach(x-> );
+
+//        getAllUsers().forEach(userInDatabase->{
+//            if(user.getUserName().equals(userInDatabase.getUserName()) && user.getPassword().equals(userInDatabase.getPassword())){
+//                return true;
+//            }
+//        });
+
+        for (User userInDatabase : getAllUsers()) {
+            if (user.getUserName().equals(userInDatabase.getUserName()) && user.getPassword().equals(userInDatabase.getPassword())) {
+                return true;
+            }
+        }
+        return false;
     }
 
-//    public Map<String,String> userValidation(User user) {
-//        Map<String,String> userMap = new HashMap<>();
-//        userRepository.findAll().forEach(x->userMap.put(user.getUserName(),user.getPassword()));
-//        return userMap;
-//    }
+
 }
