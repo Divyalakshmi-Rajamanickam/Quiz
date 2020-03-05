@@ -1,0 +1,2 @@
+--CREATE TABLE user_validation (userId int PRIMARY KEY,
+--    firstName VARCHAR(30), lastName VARCHAR(30));
